@@ -1,0 +1,79 @@
+{
+  "name": "vue-data-table",
+  "description": "data table - done in vue",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vue-comps",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vue-comps/vue-data-table"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "vue-clusterize": "^0.4.0",
+    "vue-mixins": "^0.2.10",
+    "vue-resize-handle": "^1.0.0"
+  },
+  "devDependencies": {
+    "callback-loader": "^0.2.4",
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "css-loader": "^0.23.1",
+    "gh-pages": "^0.11.0",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-chai-dom": "^1.1.0",
+    "karma-chai-spies": "^0.1.4",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "karma-vue-component": "^0.1.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.3",
+    "pug": "^2.0.0-beta3",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
+    "template-html-loader": "0.0.3",
+    "vue": "^1.0.25",
+    "vue-compiler": "^0.3.0",
+    "vue-comps-tooltip": "^0.2.1",
+    "vue-dev-server": "^0.2.10",
+    "vue-html-loader": "^1.2.2",
+    "vue-icons": "^1.1.0",
+    "vue-loader": "^8.5.2",
+    "vue-style-loader": "^1.0.0",
+    "vueify-insert-css": "^1.0.0",
+    "webpack": "^1.13.1"
+  },
+  "keywords": [
+    "data",
+    "grid",
+    "data-table",
+    "vue",
+    "invisible pagination"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "NODE_ENV=production vue-compiler --out . src/*.vue",
+    "dev": "vue-dev-server",
+    "watch": "karma start --browsers Chrome --auto-watch --reporters spec",
+    "test": "karma start --single-run",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish",
+    "ghpages": "vue-dev-server --static static/ && gh-pages -d static"
+  }
+}
