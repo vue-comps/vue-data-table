@@ -17,15 +17,13 @@ Only for [**webpack**](https://webpack.github.io/) workflows.
 ```sh
 npm install --save-dev vue-data-table
 ```
-"data-table": require "../src/data-table.vue"
-"data-table-column": require "../src/data-table-column.vue"
 ## Usage
 ```coffee
 # link the components up
 components:
-  "data-table": require "vue-data-table/data-table"
-  "data-table-column": require "vue-data-table/data-table-column"
-# or ES6
+  "data-table": require("vue-data-table/data-table")
+  "data-table-column": require("vue-data-table/data-table-column")
+# or ES6 import
 import {dataTable,dataTableColumn} from "vue-data-table"
 components: {
   "data-table": dataTable
@@ -107,10 +105,6 @@ npm install
 npm run test
 ```
 Browse to `http://localhost:8080/`.
-
-## To-Do
-- allow more than one (fixed-width) object per row + autosize to adjust #objects to actual width.
-- use html5 history mode or document.store to save scroll position
 
 ## License
 Copyright (c) 2016 Paul Pflugradt
