@@ -49,8 +49,8 @@ For examples see [`dev/`](https://github.com/vue-comps/vue-data-table/tree/maste
 | auto-height | Boolean | false | If autoheight should be used (see below) |
 | manual-start | Boolean | false | rendering doesn't start on `ready` (call `start` on the component instance instead)|
 | data | Array | [] | static data to render |
-| scrollTop | Number | 0 | sets scrollTop |
-| scrollLeft | Number | 0 | sets scrollLeft |
+| scroll-top | Number | 0 | sets scrollTop |
+| scroll-left | Number | 0 | sets scrollLeft |
 
 ##### data-table-column
 | Name | type | default | description |
@@ -58,11 +58,11 @@ For examples see [`dev/`](https://github.com/vue-comps/vue-data-table/tree/maste
 | name | String | - | (required) name of the column. Used as default for the header. Must be unique |
 | style | Object | {whiteSpace:"nowrap"} | style for the header of the column. |
 | pinned | Boolean | false | column will be on the left, always visible |
-| noResize | Boolean | false | disable resize of this column |
+| no-resize | Boolean | false | disable resize of this column |
 | width | Number | -1 | initial width of the column (defaults to width of the header) |
-| minWidth | Number | -1 | minimal width of the column (defaults to width of the header) |
-| maxWidth | Number | Number.MAX_VALUE | maximal width of the column |
-| defaultWidth | Number or String | "auto" | width of the column on double click on resizer. "auto" looks for content width of the column |
+| min-width | Number | -1 | minimal width of the column (defaults to width of the header) |
+| max-width | Number | Number.MAX_VALUE | maximal width of the column |
+| default-width | Number or String | "auto" | width of the column on double click on resizer. "auto" looks for content width of the column |
 
 ## Autoheight
 
